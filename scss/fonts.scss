@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('../fonts/OpenSansRegular.eot');
+    src: url('../fonts/OpenSansRegular.eot') format('embedded-opentype'),
+         url('../fonts/OpenSansRegular.woff2') format('woff2'),
+         url('../fonts/OpenSansRegular.woff') format('woff'),
+         url('../fonts/OpenSansRegular.ttf') format('truetype'),
+         url('../fonts/OpenSansRegular.svg#OpenSansRegular') format('svg');
+}
+
+$osr: 'OpenSansRegular';
+
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('../fonts/OpenSansBold.eot');
+    src: url('../fonts/OpenSansBold.eot') format('embedded-opentype'),
+         url('../fonts/OpenSansBold.woff2') format('woff2'),
+         url('../fonts/OpenSansBold.woff') format('woff'),
+         url('../fonts/OpenSansBold.ttf') format('truetype'),
+         url('../fonts/OpenSansBold.svg#OpenSansBold') format('svg');
+}
+
+$osb: 'OpenSansBold';
+
+@font-face {
+    font-family: 'BebasNeueBold';
+    src: url('../fonts/BebasNeueBold.eot');
+    src: url('../fonts/BebasNeueBold.eot') format('embedded-opentype'),
+         url('../fonts/BebasNeueBold.woff2') format('woff2'),
+         url('../fonts/BebasNeueBold.woff') format('woff'),
+         url('../fonts/BebasNeueBold.ttf') format('truetype'),
+         url('../fonts/BebasNeueBold.svg#BebasNeueBold') format('svg');
+}
+
+$beb: 'BebasNeueBold';
+
+@font-face {
+    font-family: 'SFUITextRegular';
+    src: url('../fonts/SFUITextRegular.eot');
+    src: url('../fonts/SFUITextRegular.eot') format('embedded-opentype'),
+         url('../fonts/SFUITextRegular.woff2') format('woff2'),
+         url('../fonts/SFUITextRegular.woff') format('woff'),
+         url('../fonts/SFUITextRegular.ttf') format('truetype'),
+         url('../fonts/SFUITextRegular.svg#SFUITextRegular') format('svg');
+}
+
+$sfr: 'SFUITextRegular';

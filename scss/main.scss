@@ -1,3 +1,174 @@
 @import "fonts.scss";
 @import "../css/reset";
 
+.main-page {
+	max-width: 1980px;
+	height: 100vh;
+	background: url('../img/bg image 1.jpg') 50%/cover no-repeat;
+	&_wrapper {
+		max-width: 1200px;
+		height: 100%;
+		margin: 0 auto;
+		color: #fff;
+		position: relative;
+	}
+	&_title {
+		text-align: center;
+		margin-top: 235px;
+		font-family: $beb;
+		font-size: 80px;
+		letter-spacing: 3px;
+		animation: blur .75s ease-out infinite;
+		text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+	}
+
+	@keyframes blur {
+		0% {text-shadow:0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff}
+	}
+	
+	&_subtitle {
+		text-align: center;
+		font-family: $beb;
+		font-size: 24px;
+		letter-spacing: 2px;
+		margin-bottom: 35px;
+	}
+	&_button-buy {
+		width: 260px;
+		height: 60px;
+		background-color: #FFB548;
+		border-radius: 3px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: $osb;
+		font-size: 16px;
+		color: #000;
+		margin: 0 auto;
+		cursor: pointer;
+		&:hover {
+			animation: shake 0.1s infinite linear;
+		}
+	}
+	@keyframes shake {
+		25% {transform: rotate(2deg);}
+		50% {transform: rotate(0deg);}
+		75% {transform: rotate(-2deg);}
+		100% {transform: rotate(0deg);}
+	}
+	&_arrow-down {
+		position: absolute;
+		left: 50%;
+		bottom: 70px;
+		font-family: $osb;
+		font-size: 12px;
+		text-transform: uppercase;
+		width: 68px;
+		height: 40px;
+		cursor: pointer;
+		background: url('../img/scroll down.svg') center 70% no-repeat;
+		animation: arrow 1s ease-in infinite alternate;
+	}
+	@keyframes arrow {
+		100% {
+			background-position: center bottom;
+		}
+	}
+	&__header {
+		padding-top: 20px;
+		display: flex;
+		width: 100%;
+		height: 60px;
+		align-items: center;
+		&_logo {}
+		&__menu {
+			padding-top: 10px;
+			margin-left: 170px;
+			margin-right: 190px;
+			display: flex;
+			width: 51%;
+			justify-content: space-between;
+			font-family: $osb;
+			font-size: 12px;
+			text-transform: uppercase;
+			cursor: pointer;
+			&_link {
+				position: relative;
+				&:after {
+				content: '';
+				position: absolute;
+				bottom: -7px;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background-color: #FFB548;
+				transform: scaleX(0);
+				transition: 0.4s;
+				}
+				&:hover:after {
+					transform: scaleX(1);
+				}
+			}
+		}
+		&__lang {
+			padding-top: 20px;
+			font-family: $osb;
+			font-size: 12px;
+			text-transform: uppercase;
+			cursor: pointer;
+			display: flex;
+			flex-direction: column;
+			align-self: flex-start;
+			width: 75px;
+			height: 108px;
+			position: relative;
+			&:after {
+				content: '';
+				position: absolute;
+				right: 25px;
+				width: 7px;
+				height: 7px;
+				border-left: 2px solid #fff;
+				border-bottom: 2px solid #fff;
+				transform: rotate(-45deg);
+			}
+			& >div:first-child {
+				padding-left: 10px;
+			}
+			& .select {
+				width: 56px;
+				height: 67px;
+				padding-left: 10px;
+				padding-top: 10px;
+				margin-top: 10px;
+				background: url('../img/lang-bg.png') left bottom no-repeat;
+				transition: 0.4s;
+				transform: scaleY(0);
+				transform-origin: top;
+				& > div:hover {
+					color: #FFB548;
+				}
+				& div:nth-child(2) {
+					margin: 5px 0;
+				}
+			}
+			& .select.active {
+				transform: scaleY(1);
+			}
+		}
+		&__markets {
+			border-left: 1px solid rgba(255,255,255, 0.5);
+			padding-left: 24px;
+			width: 100px;
+			justify-content: space-between;
+			display: flex;
+			&_shop {
+				transition: 0.5s;
+				border-radius: 50%;
+				&:hover {
+					box-shadow: 0 0 0 5px #cacaca;
+				}
+			}
+		}
+	}
+}

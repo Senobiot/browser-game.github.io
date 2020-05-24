@@ -14,9 +14,51 @@
 	<!-- =========================================section MAIN-PAGE======================================= -->
 
 	<section class="main-page" id="main-page">
+		<div class="main-page_wrapper">
+			<div class="main-page__header">
+				<div class="main-page__header_logo"><img src="img/logo.png" alt=""></div>
+				<nav class="main-page__header__menu">
+					<div class="main-page__header__menu_link">main</div>
+					<div class="main-page__header__menu_link">about</div>
+					<div class="main-page__header__menu_link">game features</div>
+					<div class="main-page__header__menu_link">system requirements</div>
+					<div class="main-page__header__menu_link">quotes</div>
+				</nav>
+				<div class="main-page__header__lang">
+					<div class="eng">eng</div>
+						<div class="select">
+							<div class="ru">rus</div>
+							<div class="fra">fra</div>
+							<div class="deu">deu</div>
+						</div>
+				</div>
+				<div class="main-page__header__markets">
+					<a href="https://www.xbox.com/en-US/pc-gaming" class="main-page__header__markets_shop" target="_blank"><img src="img/xbox icon.svg" alt="xbox icon"></a>
+					<a href="https://store.steampowered.com/" class="main-page__header__markets_shop" target="_blank"><img src="img/Union.svg" alt="xbox icon"></a>
+				</div>
+			</div>
+			<h1 class="main-page_title">survive at all costs</h1>
+			<h2 class="main-page_subtitle">Experience new social battle royale game</h2>
+			<a href="https://store.steampowered.com/" target="_blank"class="main-page_button-buy">Buy Now on Steam $14.99</a>
+			<div class="main-page_arrow-down">the story</div>
+		</div>
 	</section>
 
 	<!-- ================================================SCRIPTS============================================= -->
-	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".main-page__header__lang").click(function(){
+				$(".select").toggleClass("active");
+			});
+			$(".select div").click(function(){
+				$(".main-page__header__lang > div:first-child").prependTo($(".select"));
+				$(this).prependTo($(".main-page__header__lang"));
+			})
+			$(".eng").click(function(){
+				$(".main-page__header__lang > div:first-child").prependTo($(".select"));
+				$(this).prependTo($(".main-page__header__lang"));
+			})
+		})
+	</script>
 </body>
 </html>
