@@ -11,6 +11,15 @@
 </head>
 <body>
 
+	<!-- =========================================Preloader======================================= -->
+	<div class="preloader-wrapper">
+		<div class="preloader">
+			<span class="logo"></span>
+			<br>Please Wait<br>
+			<div class="loading">Loading</div>
+		</div>
+	</div>
+	</div>
 	<!-- =========================================section MAIN-PAGE======================================= -->
 
 	<section class="main-page" id="main-page">
@@ -47,6 +56,8 @@
 	<!-- ================================================SCRIPTS============================================= -->
 	<script type="text/javascript">
 		$(document).ready(function () {
+
+			/*======================Language Selector===========================*/
 			$(".main-page__header__lang").click(function(){
 				$(".select").toggleClass("active");
 			});
@@ -59,6 +70,13 @@
 				$(this).prependTo($(".main-page__header__lang"));
 			})
 		})
+
+		/*================================preloader============================*/
+
+		$(window).on('load', function () {
+			$('.preloader-wrapper').delay(500).fadeOut('slow');
+			$(".preloadall").css("display", "none");
+		});
 	</script>
 </body>
 </html>
