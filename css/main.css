@@ -115,13 +115,58 @@ h1, h2, h3, h4, h5, h6 {
 .main-page {
   max-width: 1980px;
   height: 100vh;
-  background: url("../img/bg image 1.jpg") 50%/cover no-repeat; }
+  background: url("../img/bg image 1.jpg") 50% bottom/cover no-repeat; }
   .main-page_wrapper {
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;
     color: #fff;
     position: relative; }
+  .main-page .burger-menu {
+    position: fixed;
+    display: none;
+    top: 50px;
+    right: 15px;
+    width: 30px;
+    height: 40px;
+    z-index: 60; }
+    .main-page .burger-menu span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      border-radius: 3px;
+      background-color: #fff;
+      -webkit-transition: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s; }
+      .main-page .burger-menu span:before, .main-page .burger-menu span:after {
+        content: '';
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+        background-color: #fff;
+        position: absolute;
+        top: 10px; }
+      .main-page .burger-menu span:after {
+        right: 0;
+        top: 20px;
+        width: 60%; }
+  .main-page .burger-menu.active {
+    padding-top: 10px; }
+    .main-page .burger-menu.active span {
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+      top: 20px; }
+      .main-page .burger-menu.active span:before {
+        -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+        top: 0; }
+      .main-page .burger-menu.active span:after {
+        -webkit-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+                transform: scaleX(0); }
   .main-page_title {
     text-align: center;
     margin-top: 235px;
@@ -170,6 +215,8 @@ h1, h2, h3, h4, h5, h6 {
     .main-page_button-buy:hover {
       -webkit-animation: shake 0.1s infinite linear;
               animation: shake 0.1s infinite linear; }
+    .main-page_button-buy span {
+      color: #1A1917; }
 
 @-webkit-keyframes shake {
   25% {
@@ -200,7 +247,8 @@ h1, h2, h3, h4, h5, h6 {
             transform: rotate(0deg); } }
   .main-page_arrow-down {
     position: absolute;
-    left: 50%;
+    left: -webkit-calc(50% - 34px);
+    left: calc(50% - 34px);
     bottom: 70px;
     font-family: "OpenSansBold";
     font-size: 12px;
@@ -268,8 +316,12 @@ h1, h2, h3, h4, h5, h6 {
           -webkit-transform: scaleX(1);
               -ms-transform: scaleX(1);
                   transform: scaleX(1); }
+    .main-page__header > div:last-child {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
     .main-page__header__lang {
-      padding-top: 20px;
       font-family: "OpenSansBold";
       font-size: 12px;
       text-transform: uppercase;
@@ -278,16 +330,11 @@ h1, h2, h3, h4, h5, h6 {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-align-self: flex-start;
-          -ms-flex-item-align: start;
-              align-self: flex-start;
+      padding-top: 10px;
+      -webkit-align-self: center;
+          -ms-flex-item-align: center;
+              align-self: center;
       width: 75px;
-      height: 108px;
       position: relative; }
       .main-page__header__lang:after {
         content: '';
@@ -303,6 +350,8 @@ h1, h2, h3, h4, h5, h6 {
       .main-page__header__lang > div:first-child {
         padding-left: 10px; }
       .main-page__header__lang .select {
+        position: absolute;
+        top: 20px;
         width: 56px;
         height: 67px;
         padding-left: 10px;
@@ -346,3 +395,99 @@ h1, h2, h3, h4, h5, h6 {
         .main-page__header__markets_shop:hover {
           -webkit-box-shadow: 0 0 0 5px #cacaca;
                   box-shadow: 0 0 0 5px #cacaca; }
+
+@media (max-width: 1280px) {
+  .main-page_wrapper {
+    padding: 20px; }
+  .main-page__header {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .main-page__header__menu {
+      margin-left: 0;
+      margin-right: 0;
+      width: 60%; }
+  .main-page_title {
+    margin-top: 30vh; } }
+
+@media (max-width: 750px) {
+  .main-page .burger-menu {
+    display: block; }
+  .main-page__header__menu {
+    position: fixed;
+    padding-top: 70px;
+    padding-right: 30px;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    -webkit-box-pack: start;
+    -webkit-justify-content: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    line-height: 3;
+    font-size: 20px;
+    background: url("../img/burger_bg.jpg") 50%/cover no-repeat;
+    z-index: 50;
+    -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+        -ms-transform-origin: right;
+            transform-origin: right;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s; }
+    .main-page__header__menu.active {
+      -webkit-transform: scaleX(1);
+          -ms-transform: scaleX(1);
+              transform: scaleX(1); }
+  .main-page__header__markets {
+    width: 40px;
+    padding-left: 0; }
+    .main-page__header__markets_shop {
+      display: none; } }
+
+@media (max-width: 480px) {
+  .main-page_title {
+    font-size: 32px;
+    margin-bottom: 15px; }
+  .main-page_subtitle {
+    font-size: 18px; }
+  .main-page_button-buy {
+    width: 217px;
+    font-size: 14px; }
+  .main-page_arrow-down {
+    bottom: 2vmin; } }
+
+@media (max-height: 650px) and (orientation: landscape) {
+  .main-page_title {
+    margin-top: 20vmin; } }
+
+@media (max-height: 430px) and (orientation: landscape) {
+  .main-page_wrapper {
+    padding-top: 0; }
+  .main-page .burger-menu {
+    top: 30px; }
+  .main-page_title {
+    font-size: 33px;
+    margin-bottom: 15px; }
+  .main-page_subtitle {
+    font-size: 18px;
+    margin-bottom: 10px; }
+  .main-page_button-buy {
+    width: 180px;
+    height: 40px;
+    font-size: 12px; }
+  .main-page_arrow-down {
+    bottom: 2vmin; } }
