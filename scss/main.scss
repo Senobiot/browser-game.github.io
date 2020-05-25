@@ -1,6 +1,7 @@
 @import "fonts.scss";
 @import "../css/reset";
 
+// =====================================Preloader================================
 
 .preloader-wrapper {
 	position: fixed;
@@ -38,6 +39,7 @@
 	left: calc(50% - 100px);
 }
 
+// ============================Main Queries==========================================
 
 .main-page {
 	max-width: 1980px;
@@ -261,6 +263,128 @@
 		}
 	}
 }
+
+// ============================About Queries==========================================
+
+.about-page {
+	max-width: 1980px;
+	height: 100vh;
+	background: url('../img/bg image 2.jpg') 50% top/cover no-repeat;
+	&_wrapper {
+		max-width: 1200px;
+		margin: 0 auto;
+		color: #fff;
+		padding-top: 20vh;
+	}
+	&__content {
+		display: flex;
+		max-width: 1080px;
+		height: 610px;
+		&__description {
+			padding-right: 28px;
+			width: 53.7%;
+			&_suptitle {
+				font-family: $beb;
+				font-size: 24px;
+				letter-spacing: 2px;
+				margin-bottom: 10px;
+			}
+			&_title {
+				font-family: $beb;
+				font-size: 80px;
+				letter-spacing: 3px;
+				padding-bottom: 10px;
+				position: relative;
+				&:after {
+					content: '';
+					position: absolute;
+					height: 3px;
+					width: 100%;
+					border-radius: 3px;
+					bottom: 0;
+					left: 0;
+					background-color: #fff;
+				}
+			}
+			&_article {
+				padding-top: 64px;
+				padding-left: 190px;
+				font-family: $osr;
+				font-size: 18px;
+				line-height: 1.2;
+				text-align: justify;
+				& span {
+					font-family: $osb;
+				}
+				& .cross {
+					font-family: $osr;
+					position: relative;
+					z-index: 0;
+					&:before {
+					content: '';
+					position: absolute;
+					background-color: #FFB548;
+					width: 100%;
+					height: 5px;
+					top: 50%;
+					z-index: -1;
+					}
+				}
+			}
+		}
+		&__slider {
+			width: 46.3%;
+			position: relative;
+			z-index: 0;
+			&_switch {
+				position: absolute;
+				cursor: pointer;
+				top: calc(50% - 38px);
+				right: -100px;
+				width: 18px;
+				height: 38px;
+				background: url('../img/switch.png') 50%/contain no-repeat;
+			}
+			&_screens {
+				width: 100%;
+				height: 610px;
+					& .screen {
+						width: 100%;
+						height: 100%;
+						transition: 0.4s;
+						& img {
+							border-radius: 10px;
+							width: 100%;
+							height: 100%;
+						}
+						&:nth-child(n+2) {
+							position: absolute;
+							z-index: -1;
+							top: 30px;
+							left: 70px;
+							width: 90%;
+							height: 90%;
+						}
+						&:nth-child(n+3) {
+							z-index: -2;
+							left: 140px;
+							top: 60px;
+							width: 80%;
+							height: 80%;
+						}
+				}
+			}
+			& img {
+				width: 100%;
+			}
+			&_dots {
+				& .dot {}
+			}
+		}
+	}
+}
+
+
 
 // ============================Media Queries==========================================
 

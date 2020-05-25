@@ -57,10 +57,29 @@
 		</div>
 	</section>
 
-	<!-- ==========================================section MAIN-PAGE========================================= -->
+	<!-- ==========================================section ABOUT-PAGE========================================= -->
 
 	<section class="about-page" id="about-page">
-		
+		<div class="about-page_wrapper">
+			<div class="about-page__content">
+				<div class="about-page__content__description">
+					<div class="about-page__content__description_suptitle">What is SOS?</div>
+					<div class="about-page__content__description_title">social battle<br>royale game</div>
+					<div class="about-page__content__description_article">Each round, <span>you</span> and <span>15</span> other contestants compete to escape a deadly island filled with monsters. The trick is: <span>three</span> people can survive. Will you run solo or form friendships with others to escape? <br><br>Making the right decisions could be the difference between <span class="cross">life and death</span>.</div>
+				</div>
+				<div class="about-page__content__slider">
+					<div class="about-page__content__slider_switch"></div>
+					<div class="about-page__content__slider_screens">
+						<div class="screen"><img src="img/screenshot_1.jpg" alt="screenshot"></div>
+						<div class="screen"><img src="img/screenshot_2.jpg" alt="screenshot"></div>
+						<div class="screen"><img src="img/screenshot_3.jpg" alt="screenshot"></div>
+					</div>
+					<div class="about-page__content__slider_dots">
+						<div class="dot"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<!-- ================================================SCRIPTS============================================= -->
@@ -92,6 +111,10 @@
 			$(".main-page__header__menu").toggleClass("active");;
 		});
 
+		// ============================Slider=======================
+		$(".about-page__content__slider_switch").click(function(){
+			$(".screen").first().appendTo(".about-page__content__slider_screens");
+		})
 	</script>
 </body>
 </html>
