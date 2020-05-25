@@ -497,6 +497,47 @@ h1, h2, h3, h4, h5, h6 {
             height: 80%; }
       .about-page__content__slider img {
         width: 100%; }
+      .about-page__content__slider_dots {
+        position: absolute;
+        width: 100%;
+        height: 20px;
+        bottom: 20px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center; }
+        .about-page__content__slider_dots .dot.active {
+          background-color: #fff; }
+        .about-page__content__slider_dots .dot, .about-page__content__slider_dots .dot.active {
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          border: 2px solid #fff; }
+        .about-page__content__slider_dots .dot:not(:first-child) {
+          margin-left: 24px; }
+        .about-page__content__slider_dots .dot:not(:last-child) {
+          margin-right: 24px; }
+        .about-page__content__slider_dots .dot.active {
+          background-color: #fff;
+          position: relative; }
+          .about-page__content__slider_dots .dot.active:before {
+            content: '';
+            position: absolute;
+            height: 3px;
+            width: 63px;
+            left: -26px;
+            top: 4px;
+            background-color: #fff; }
+        .about-page__content__slider_dots .dot.active:first-child:before {
+          width: 37px;
+          left: 0px; }
+        .about-page__content__slider_dots .dot.active:last-child:before {
+          width: 37px;
+          left: -26px; }
 
 @media (max-width: 1280px) {
   .main-page_wrapper {

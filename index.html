@@ -73,10 +73,10 @@
 						<div class="screen"><img src="img/screenshot_1.jpg" alt="screenshot"></div>
 						<div class="screen"><img src="img/screenshot_2.jpg" alt="screenshot"></div>
 						<div class="screen"><img src="img/screenshot_3.jpg" alt="screenshot"></div>
+						<div class="screen"><img src="img/screenshot_4.jpg" alt="screenshot"></div>
+						<div class="screen"><img src="img/screenshot_5.jpg" alt="screenshot"></div>
 					</div>
-					<div class="about-page__content__slider_dots">
-						<div class="dot"></div>
-					</div>
+					<div class="about-page__content__slider_dots"></div>
 				</div>
 			</div>
 		</div>
@@ -84,6 +84,17 @@
 
 	<!-- ================================================SCRIPTS============================================= -->
 	<script type="text/javascript">
+				/*================================preloader============================*/
+		$(window).on('load', function () {
+			$('.preloader-wrapper').delay(500).fadeOut('slow');
+			$(".preloadall").css("display", "none");
+		});
+		$(".burger-menu").click(function(){
+			$(this).toggleClass("active");
+			$(".main-page__header__menu").toggleClass("active");;
+		});
+
+
 		$(document).ready(function () {
 
 			/*======================Language Selector===========================*/
@@ -98,23 +109,37 @@
 				$(".main-page__header__lang > div:first-child").prependTo($(".select"));
 				$(this).prependTo($(".main-page__header__lang"));
 			})
-		})
 
-		/*================================preloader============================*/
+		let slide_qty = $(".about-page__content__slider_screens > div").length;
+		
+		for (let i = 0; i < slide_qty; i++) {
+			if (i == 0) {
+				$(".about-page__content__slider_dots").append("<div class='dot active'><div>");
+			} else {
+				$(".about-page__content__slider_dots").append("<div class='dot'><div>");}
+		};
+		let dots = $(".about-page__content__slider_dots").children();
 
-		$(window).on('load', function () {
-			$('.preloader-wrapper').delay(500).fadeOut('slow');
-			$(".preloadall").css("display", "none");
+		let dots_ind = 0;
+		$(".about-page__content__slider_switch").click(function(){
+			$(".screen").first().appendTo(".about-page__content__slider_screens");
+			// $(".dot.active").removeClass("active");
+			if (dots_ind < slide_qty - 1) {
+				$(dots[++dots_ind]).addClass("active");
+			} else {
+				$(".dot.active").removeClass("active");
+				$(dots[0]).addClass("active");
+				dots_ind = 0;
+			}
 		});
-		$(".burger-menu").click(function(){
-			$(this).toggleClass("active");
-			$(".main-page__header__menu").toggleClass("active");;
+			$(".dot").click(function(){
+				$(this).addClass("active");
+			});
 		});
 
 		// ============================Slider=======================
-		$(".about-page__content__slider_switch").click(function(){
-			$(".screen").first().appendTo(".about-page__content__slider_screens");
-		})
+
+
 	</script>
 </body>
 </html>

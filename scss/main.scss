@@ -264,7 +264,7 @@
 	}
 }
 
-// ============================About Queries==========================================
+// ============================About Page==========================================
 
 .about-page {
 	max-width: 1980px;
@@ -378,7 +378,48 @@
 				width: 100%;
 			}
 			&_dots {
-				& .dot {}
+				position: absolute;
+				width: 100%;
+				height: 20px;
+				bottom: 20px;
+				display: flex;
+				justify-content: center;
+				& .dot.active {
+					background-color: #fff;
+				}
+				& .dot, & .dot.active {
+					width: 15px;
+					height: 15px;
+					border-radius: 50%;
+					border: 2px solid #fff;
+				}
+				& .dot:not(:first-child) {
+					margin-left: 24px;
+				}
+				& .dot:not(:last-child) {
+					margin-right: 24px;
+				}
+				& .dot.active {
+					background-color: #fff;
+					position: relative;
+					&:before {
+						content: '';
+						position: absolute;
+						height: 3px;
+						width: 63px;
+						left: -26px;
+						top: 4px;
+						background-color: #fff;
+					}
+				}
+				& .dot.active:first-child:before {
+					width: 37px;
+					left: 0px;
+				}
+				& .dot.active:last-child:before {
+					width: 37px;
+					left: -26px;
+				}
 			}
 		}
 	}
