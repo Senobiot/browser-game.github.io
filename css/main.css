@@ -513,6 +513,7 @@ h1, h2, h3, h4, h5, h6 {
         .about-page__content__slider_dots .dot.active {
           background-color: #fff; }
         .about-page__content__slider_dots .dot, .about-page__content__slider_dots .dot.active {
+          cursor: pointer;
           width: 15px;
           height: 15px;
           border-radius: 50%;

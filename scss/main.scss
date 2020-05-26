@@ -388,6 +388,7 @@
 					background-color: #fff;
 				}
 				& .dot, & .dot.active {
+					cursor: pointer;
 					width: 15px;
 					height: 15px;
 					border-radius: 50%;
