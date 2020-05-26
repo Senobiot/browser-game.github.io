@@ -274,7 +274,7 @@
 		max-width: 1200px;
 		margin: 0 auto;
 		color: #fff;
-		padding-top: 20vh;
+		padding-top: 15vh;
 	}
 	&__content {
 		display: flex;
@@ -445,6 +445,46 @@
 	.main-page_title {
 		margin-top: 30vh;
 	}
+	.about-page_wrapper {
+		padding: 10vh 20px 0;
+	}
+	.about-page__content {
+	}
+	.about-page__content__description {
+		width: 50%;
+	}
+	.about-page__content__slider {
+		width: 40%;
+	}
+}
+
+@media (max-width: 1100px) {
+	.about-page_wrapper {
+		padding-top: 30px;
+	}
+	.about-page__content {
+		flex-direction: column;
+		height: calc(90vh);
+		justify-content: center;
+		&__description {
+			width: 100%;
+			margin-bottom: 10px;
+			&_title {
+				font-size: 50px;
+			}
+			&_article {
+				padding: 10px;
+				font-size: 14px;
+			}
+		}
+		&__slider {
+			width: 350px;
+			height: 420px;
+			&_screens {
+				height: 420px;
+			}
+		}
+	}
 }
 
 @media (max-width: 750px) {
@@ -483,6 +523,21 @@
 		}
 	}
 }
+@media (max-width: 650px) {
+	.about-page__content__description {
+		&_suptitle {
+			font-size: 20px;
+			margin-bottom: 0;
+		}
+		&_title {
+			font-size: 40px;
+		}
+		&_article {
+			font-size: 12px;
+			padding: 5px;
+		}
+	}
+}
 
 @media (max-width: 480px) {
 	.main-page_title {
@@ -499,11 +554,64 @@
 	.main-page_arrow-down {
 		bottom: 2vmin;
 	}
+	.about-page_wrapper {
+		padding-top: 20px;
+	}
+	.about-page__content__slider {
+		width: 230px;
+		height: 280px;
+		&_switch {
+			right: -65px;
+			top: 45%;
+		}
+		&_screens {
+			width: 250px;
+			height: 300px;
+			& .screen {
+				&:nth-child(n+2) {
+				top: 25px;
+				left: 55px;
+				width: 90%;
+				height: 90%;
+				}
+				&:nth-child(n+3) {
+					left: 110px;
+					top: 40px;
+					width: 70%;
+					height: 80%;
+				}
+			}
+		}
+	}
+	.about-page__content__slider_dots {
+		margin-left: 10px;
+		& .dot, & .dot.active {
+			border: 1px solid #fff;
+			height: 8px;
+			width: 10px;
+			&:before {
+				height: 1px;
+				top: 3px;
+			}
+			&:last-child:before {
+				width: 30px;
+			};
+		}
+	}
 }
 
-@media (max-height: 650px) and (orientation: landscape) {
+@media (max-height: 660px) and (orientation: landscape) {
 	.main-page_title {
 		margin-top: 20vmin;
+	}
+	.about-page {
+		height: auto;
+	}
+	.about-page_wrapper {
+		height: auto;
+	}
+	.about-page__content {
+		height: auto;
 	}
 }
 
