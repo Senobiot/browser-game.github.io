@@ -562,7 +562,7 @@
 		}
 	}
 	.about-page_wrapper {
-		padding-top: 50px;
+		padding: 50px 10px 0;
 	}
 	.about-page__content__description {
 		&_title {
@@ -576,8 +576,10 @@
 		width: 230px;
 		height: 280px;
 		&_switch {
-			right: -65px;
+			right: -60px;
 			top: 45%;
+			width: 14px;
+			height: 30px;
 		}
 		&_screens {
 			width: 250px;
@@ -617,7 +619,7 @@
 
 @media (max-height: 660px) and (orientation: landscape) {
 	.main-page_title {
-		margin-top: 20vmin;
+		margin-top: 10vmin;
 	}
 	.about-page {
 		height: 750px;

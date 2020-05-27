@@ -664,7 +664,7 @@ h1, h2, h3, h4, h5, h6 {
     .about-page__content {
       height: inherit; }
   .about-page_wrapper {
-    padding-top: 50px; }
+    padding: 50px 10px 0; }
   .about-page__content__description_title {
     font-size: 30px; }
   .about-page__content__description_article {
@@ -673,8 +673,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 230px;
     height: 280px; }
     .about-page__content__slider_switch {
-      right: -65px;
-      top: 45%; }
+      right: -60px;
+      top: 45%;
+      width: 14px;
+      height: 30px; }
     .about-page__content__slider_screens {
       width: 250px;
       height: 300px; }
@@ -702,7 +704,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-height: 660px) and (orientation: landscape) {
   .main-page_title {
-    margin-top: 20vmin; }
+    margin-top: 10vmin; }
   .about-page {
     height: 750px;
     overflow: hidden; }
