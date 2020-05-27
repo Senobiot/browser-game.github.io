@@ -19,7 +19,7 @@
 			<div class="loading">Loading</div>
 		</div>
 	</div>
-	<!-- =========================================section MAIN-PAGE======================================= -->
+	<!-- =========================================section MAIN-PAGE=============================== -->
 
 	<section class="main-page" id="main-page">
 		<div class="main-page_wrapper">
@@ -57,7 +57,7 @@
 		</div>
 	</section>
 
-	<!-- ==========================================section ABOUT-PAGE========================================= -->
+	<!-- ==========================================section ABOUT-PAGE============================= -->
 
 	<section class="about-page" id="about-page">
 		<div class="about-page_wrapper">
@@ -82,16 +82,58 @@
 		</div>
 	</section>
 
-	<!-- ================================================SCRIPTS============================================= -->
+	<!-- ========================================section FEATURES-PAGE================================= -->
+
+	<section class="features-page" id="features-page">
+		<div class="features-page_wrapper">
+			<div class="features-page__content">
+				<div class="features-page__content_suptitle">What’s so special?</div>
+				<div class="features-page__content_title">features</div>
+				<div class="features-page__content__features">
+					<div class="feature active">
+						<div class="feature_title">survive at all costs</div>
+						<div class="feature_article">You have 30 minutes to find a relic, signal for extraction, and grab one of three spots on the rescue chopper.</div>
+					</div>
+					<div class="feature">
+						<div class="feature_title">create allies and enemies</div>
+						<div class="feature_article">You have 30 minutes to find a relic, signal for extraction, and grab one of three spots on the rescue chopper</div>
+					</div>
+					<div class="feature">
+						<div class="feature_title">impress the audience</div>
+						<div class="feature_article">You have 30 minutes to find a relic, signal for extraction, and grab one of three spots on the rescue chopper</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ========================================section SYSTEMREQ-PAGE================================= -->
+
+	<section class="systemreq-page" id="systemreq-page">
+	</section>
+		<!-- ========================================section QUOTES-PAGE================================= -->
+
+	<section class="quotes-page" id="quotes-page">
+	</section>
+		<!-- ========================================section SUBSCRIBE-PAGE================================= -->
+
+	<section class="subscribe-page" id="subscribe-page">
+	</section>
+
+	<!-- ================================================SCRIPTS==================================== -->
 	<script type="text/javascript">
 				/*================================preloader============================*/
 		$(window).on('load', function () {
 			$('.preloader-wrapper').delay(500).fadeOut('slow');
 			$(".preloadall").css("display", "none");
 		});
+
+		// ==========================burger-menu=========================================
+
 		$(".burger-menu").click(function(){
 			$(this).toggleClass("active");
-			$(".main-page__header__menu").toggleClass("active");;
+			$(".main-page__header__menu").toggleClass("active");
+			$("body").toggleClass("lock");
 		});
 
 
@@ -110,6 +152,8 @@
 				$(this).prependTo($(".main-page__header__lang"));
 			})
 
+
+			// ============================Slider=======================
 		let slide_qty = $(".about-page__content__slider_screens > div").length;
 		
 		for (let i = 0; i < slide_qty; i++) {
@@ -149,9 +193,15 @@
 				}
 				
 			});
+
+			// ================ feature switcher =====================
+			$(".feature").click(function(){
+				$(".feature").removeClass("active");
+				$(this).addClass("active");
+			})
 		});
 
-		// ============================Slider=======================
+
 
 
 	</script>
