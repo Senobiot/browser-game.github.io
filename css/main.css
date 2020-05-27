@@ -650,7 +650,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
   .main-page_title {
     font-size: 32px;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    margin-top: 15vh; }
   .main-page_subtitle {
     font-size: 18px; }
   .main-page_button-buy {
@@ -658,8 +659,16 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 14px; }
   .main-page_arrow-down {
     bottom: 2vmin; }
+  .about-page {
+    height: 600px; }
+    .about-page__content {
+      height: inherit; }
   .about-page_wrapper {
-    padding-top: 20px; }
+    padding-top: 50px; }
+  .about-page__content__description_title {
+    font-size: 30px; }
+  .about-page__content__description_article {
+    font-size: 10px; }
   .about-page__content__slider {
     width: 230px;
     height: 280px; }
@@ -695,11 +704,12 @@ h1, h2, h3, h4, h5, h6 {
   .main-page_title {
     margin-top: 20vmin; }
   .about-page {
-    height: auto; }
-  .about-page_wrapper {
-    height: auto; }
-  .about-page__content {
-    height: auto; } }
+    height: 750px;
+    overflow: hidden; }
+    .about-page_wrapper {
+      height: inherit; }
+    .about-page__content {
+      height: inherit; } }
 
 @media (max-height: 430px) and (orientation: landscape) {
   .main-page_wrapper {

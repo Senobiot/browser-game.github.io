@@ -543,6 +543,7 @@
 	.main-page_title {
 		font-size: 32px;
 		margin-bottom: 15px;
+		margin-top: 15vh;
 	}
 	.main-page_subtitle {
 		font-size: 18px;
@@ -554,8 +555,22 @@
 	.main-page_arrow-down {
 		bottom: 2vmin;
 	}
+	.about-page {
+		height: 600px;
+		&__content {
+			height: inherit;
+		}
+	}
 	.about-page_wrapper {
-		padding-top: 20px;
+		padding-top: 50px;
+	}
+	.about-page__content__description {
+		&_title {
+		font-size: 30px;
+		}
+		&_article {
+			font-size: 10px;
+		}
 	}
 	.about-page__content__slider {
 		width: 230px;
@@ -605,13 +620,16 @@
 		margin-top: 20vmin;
 	}
 	.about-page {
-		height: auto;
-	}
-	.about-page_wrapper {
-		height: auto;
+		height: 750px;
+		overflow: hidden;
+		&_wrapper {
+			height: inherit;
+		}
+		&__content {
+			height: inherit;
+		}
 	}
 	.about-page__content {
-		height: auto;
 	}
 }
 
