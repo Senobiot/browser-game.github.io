@@ -144,6 +144,72 @@
 		<!-- ========================================section QUOTES-PAGE================================= -->
 
 	<section class="quotes-page" id="quotes-page">
+		<div class="quotes-page_wrapper">
+			<div class="quotes-page__content">
+				<div class="quotes-page__content__description">
+					<div class="quotes-page__content__description_suptitle page-suptitles">What people think?</div>
+					<div class="quotes-page__content__description_title page-titles">Press quotes</div>
+					<div class="quotes-page__content__description_article">Our goal is to create a product and service that you’re satisfied with and use it every day. This is why we’re constantly working on our services to make it better every day and really listen to what our users has to say.</div>
+					<div class="quotes-page__content__description_button">Read more Testimonials</div>
+				</div>
+				<div class="quotes-page__content__posts">
+					<div class="user">
+						<div class="user__personal">
+							<div class="user__personal_logo"><img src="img/user_logo-1.png" alt="user logo"></div>
+							<div class="user__personal_name">Evan Lahti</div>
+							<div class="user__personal_rank">PC Gamer</div>
+						</div>
+						<div class="user_message">“One of my gaming highlights of the year.”</div>
+						<div class="user_date">October 18, 2018</div>
+					</div>
+					<div class="user">
+						<div class="user__personal">
+							<div class="user__personal_logo"><img src="img/user_logo-2.png" alt="user logo"></div>
+							<div class="user__personal_name">Jada Griffin </div>
+							<div class="user__personal_rank">Nerdreactor</div>
+						</div>
+						<div class="user_message">“The next big thing in the world of streaming and survival games.”</div>
+						<div class="user_date">December 21, 2018</div>
+					</div>
+					<div class="user">
+						<div class="user__personal">
+							<div class="user__personal_logo"><img src="img/user_logo-3.png" alt="user logo"></div>
+							<div class="user__personal_name">Aaron Williams </div>
+							<div class="user__personal_rank">Uproxx</div>
+						</div>
+						<div class="user_message">“Snoop Dogg Playing The Wildly Entertaining ‘SOS’ Is Ridiculous.”</div>
+						<div class="user_date">December 24, 2018</div>
+					</div>
+					<div class="user">
+						<div class="user__personal">
+							<div class="user__personal_logo"><img src="img/user_logo-4.jpg" alt="user logo"></div>
+							<div class="user__personal_name">Ivan Ivanov</div>
+							<div class="user__personal_rank">Novice</div>
+						</div>
+						<div class="user_message">Lorem ipsum dolor sit amet.</div>
+						<div class="user_date">December 04, 2018</div>
+					</div>
+					<div class="user">
+						<div class="user__personal">
+							<div class="user__personal_logo"><img src="img/user_logo-5.jpg" alt="user logo"></div>
+							<div class="user__personal_name">Alina Kabaeva</div>
+							<div class="user__personal_rank">Dancer</div>
+						</div>
+						<div class="user_message">Lorem ipsum dolor sit amet.</div>
+						<div class="user_date">November 25, 2016</div>
+					</div>
+					<div class="user">
+						<div class="user__personal">
+							<div class="user__personal_logo"><img src="img/user_logo-6.jpg" alt="user logo"></div>
+							<div class="user__personal_name">Petr Sidorov</div>
+							<div class="user__personal_rank">Engineer</div>
+						</div>
+						<div class="user_message">Lorem ipsum dolor sit amet.</div>
+						<div class="user_date">January 12, 2020</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 		<!-- ========================================section SUBSCRIBE-PAGE================================= -->
 
@@ -230,7 +296,10 @@
 				$(this).addClass("active");
 			})
 		});
-
+			// ===================Load Quotes===================
+			$(".quotes-page__content__description_button").click(function(){
+				$(".quotes-page__content__posts .user:nth-child(n+4)").prependTo(".quotes-page__content__posts");
+			})
 
 
 
