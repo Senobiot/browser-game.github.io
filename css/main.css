@@ -401,6 +401,16 @@ body.lock {
           -webkit-box-shadow: 0 0 0 5px #cacaca;
                   box-shadow: 0 0 0 5px #cacaca; }
 
+.page-suptitles {
+  font-family: "BebasNeueBold";
+  font-size: 24px;
+  letter-spacing: 2px; }
+
+.page-titles {
+  font-family: "BebasNeueBold";
+  font-size: 80px;
+  letter-spacing: 3px; }
+
 .about-page {
   width: 100%;
   background-color: #080A0B;
@@ -424,14 +434,8 @@ body.lock {
       padding-right: 28px;
       width: 53.7%; }
       .about-page__content__description_suptitle {
-        font-family: "BebasNeueBold";
-        font-size: 24px;
-        letter-spacing: 2px;
         margin-bottom: 10px; }
       .about-page__content__description_title {
-        font-family: "BebasNeueBold";
-        font-size: 80px;
-        letter-spacing: 3px;
         padding-bottom: 10px;
         position: relative; }
         .about-page__content__description_title:after {
@@ -560,14 +564,7 @@ body.lock {
     background: url("../img/Rectangle_bg-3-2.png") 50%/cover no-repeat, url("../img/bg_image-3.jpg") 50%/cover no-repeat; }
   .features-page__content {
     padding: 13% 0 0 55%; }
-    .features-page__content_suptitle {
-      font-family: "BebasNeueBold";
-      font-size: 24px;
-      letter-spacing: 2px; }
     .features-page__content_title {
-      font-family: "BebasNeueBold";
-      font-size: 80px;
-      letter-spacing: 3px;
       margin-bottom: 80px; }
     .features-page__content__features .feature {
       padding-left: 40px;
@@ -616,6 +613,67 @@ body.lock {
       display: block; }
     .features-page__content__features .feature.active .feature_article {
       display: block; }
+
+.systemreq-page {
+  height: 100vh;
+  background-color: #080A0B; }
+  .systemreq-page_wrapper {
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 120px;
+    color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    background: url("../img/Rectangle_bg-4.png") 50%/cover no-repeat, url("../img/bg_image-4.jpg") 50%/cover no-repeat; }
+  .systemreq-page__header {
+    text-align: center; }
+  .systemreq-page__content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    width: 572px; }
+    .systemreq-page__content__reqs {
+      height: 126px;
+      padding: 10px 20px;
+      width: 50%;
+      border: 1px solid rgba(151, 151, 151, 0.3); }
+      .systemreq-page__content__reqs:last-child {
+        width: 100%;
+        height: 150px;
+        position: relative; }
+        .systemreq-page__content__reqs:last-child:after {
+          content: '';
+          position: absolute;
+          bottom: -3px;
+          left: 10%;
+          width: 91px;
+          height: 16px;
+          background: #080A0B url("../img/drawing.svg") 50%/cover no-repeat; }
+      .systemreq-page__content__reqs_title {
+        font-family: "BebasNeueBold";
+        font-size: 24px;
+        letter-spacing: 2px;
+        color: #FFB548;
+        margin-bottom: 20px; }
+      .systemreq-page__content__reqs_spec {
+        font-family: "OpenSansRegular";
+        font-size: 18px;
+        line-height: 1.2; }
 
 @media (max-width: 1280px) {
   .main-page_wrapper {
@@ -673,7 +731,9 @@ body.lock {
     .features-page__content__features .feature_title {
       font-size: 28px; }
     .features-page__content__features .feature_article {
-      max-width: 320px; } }
+      max-width: 320px; }
+  .systemreq-page_wrapper {
+    padding: 0 20px; } }
 
 @media (max-width: 750px) {
   .main-page .burger-menu {
@@ -720,7 +780,11 @@ body.lock {
     width: 40px;
     padding-left: 0; }
     .main-page__header__markets_shop {
-      display: none; } }
+      display: none; }
+  .systemreq-page__header_suptitle {
+    font-size: 24px; }
+  .systemreq-page__header_title {
+    font-size: 50px; } }
 
 @media (max-width: 650px) {
   .about-page__content__description_suptitle {
@@ -736,7 +800,13 @@ body.lock {
     .features-page__content_suptitle {
       font-size: 30px; }
     .features-page__content_title {
-      font-size: 46px; } }
+      font-size: 46px; }
+  .systemreq-page_wrapper {
+    background: url(../img/Rectangle_bg-4.png) 50%/cover no-repeat, url(../img/bg_image-4.jpg) 80%/cover no-repeat; }
+  .systemreq-page__content {
+    width: 100%; }
+    .systemreq-page__content__reqs_spec {
+      font-size: 14px; } }
 
 @media (max-width: 480px) {
   .main-page_title {
@@ -821,7 +891,11 @@ body.lock {
     .features-page__content__features .feature.active:nth-child(3):after {
       display: block;
       height: 100px;
-      top: -100px; } }
+      top: -100px; }
+  .systemreq-page__header_suptitle {
+    font-size: 16px; }
+  .systemreq-page__header_title {
+    font-size: 30px; } }
 
 @media (max-width: 370px) {
   .features-page__content {
@@ -838,6 +912,8 @@ body.lock {
     .about-page__content {
       height: inherit; }
   .features-page {
+    height: 600px; }
+  .systemreq-page {
     height: 600px; } }
 
 @media (max-height: 430px) and (orientation: landscape) {
