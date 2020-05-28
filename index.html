@@ -29,11 +29,11 @@
 			<div class="main-page__header">
 				<div class="main-page__header_logo"><img src="img/logo.png" alt=""></div>
 				<nav class="main-page__header__menu">
-					<div class="main-page__header__menu_link">main</div>
-					<div class="main-page__header__menu_link">about</div>
-					<div class="main-page__header__menu_link">game features</div>
-					<div class="main-page__header__menu_link">system requirements</div>
-					<div class="main-page__header__menu_link">quotes</div>
+					<div class="main-page__header__menu_link" href="#main-page">main</div>
+					<div class="main-page__header__menu_link" href="#about-page">about</div>
+					<div class="main-page__header__menu_link" href="#features-page">game features</div>
+					<div class="main-page__header__menu_link" href="#systemreq-page">system requirements</div>
+					<div class="main-page__header__menu_link" href="#quotes-page">quotes</div>
 				</nav>
 				<div>
 					<div class="main-page__header__lang">
@@ -82,7 +82,7 @@
 		</div>
 	</section>
 
-	<!-- ========================================section FEATURES-PAGE================================= -->
+	<!-- ========================================section FEATURES-PAGE============================== -->
 
 	<section class="features-page" id="features-page">
 		<div class="features-page_wrapper">
@@ -107,7 +107,7 @@
 		</div>
 	</section>
 
-	<!-- ========================================section SYSTEMREQ-PAGE================================= -->
+	<!-- ========================================section SYSTEMREQ-PAGE============================== -->
 
 	<section class="systemreq-page" id="systemreq-page">
 		<div class="systemreq-page_wrapper">
@@ -141,7 +141,7 @@
 			</div>
 		</div>
 	</section>
-		<!-- ========================================section QUOTES-PAGE================================= -->
+	<!-- ========================================section QUOTES-PAGE================================= -->
 
 	<section class="quotes-page" id="quotes-page">
 		<div class="quotes-page_wrapper">
@@ -211,98 +211,51 @@
 			</div>
 		</div>
 	</section>
-		<!-- ========================================section SUBSCRIBE-PAGE================================= -->
+	<!-- ========================================section SUBSCRIBE-PAGE================================ -->
 
 	<section class="subscribe-page" id="subscribe-page">
+		<div class="subscribe-page_wrapper">
+			<div class="subscribe-page__content">
+				<div class="subscribe-page__content_suptitle page-suptitles">Want to stay in touch?</div>
+				<div class="subscribe-page__content_title page-titles">newsletter subcscribe</div>
+				<div class="subscribe-page__content_article">In order to start receiving our news, all you have to do is enter your email address. Everything else will be taken care of by us. We will send you emails containing information about game. We don’t spam.</div>
+				<div class="subscribe-page__content_form">
+					<form action="send.php" method="post" id="subscribe" >
+						<input type="email" form="subscribe" placeholder="Your Email Adress" required>
+						<button type="submit" form="subscribe">Subcribe Now</button>
+					</form>
+				</div>
+			</div>
+			<footer class="subscribe-page__footer">
+				<div class="subscribe-page__footer__navigation">
+					<div class="subscribe-page__footer__navigation_logo"><img src="img/logo2.png" alt="logo"></div>
+					<nav class="subscribe-page__footer__navigation__menu">
+						<div class="menu_link" href="#main-page">main</div>
+						<div class="menu_link" href="#about-page">about</div>
+						<div class="menu_link" href="#features-page">game features</div>
+						<div class="menu_link" href="#systemreq-page">system requirements</div>
+						<div class="menu_link" href="#quotes-page">quotes</div>
+					</nav>
+					<div class="subscribe-page__footer__socials">
+						<div class="social-net"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+						<div class="social-net"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+						<div class="social-net"><i class="fa fa-youtube-play" aria-hidden="true"></i></div>
+						<div class="social-net"><i class="fa fa-twitch" aria-hidden="true"></i></div>
+					</div>
+				</div>
+				<div class="subscribe-page__footer__terms-rules">
+					<div class="subscribe-page__footer__terms-rules_owner"> © 2018 Outpost Games, Inc. All Rights Reserved</div>
+					<div class="subscribe-page__footer__terms-rules__regulations">
+						<div class="regulation">Privacy Policy</div>
+						<div class="regulation">Terms of Services</div>
+						<div class="regulation">Code of Conduct </div>
+					</div>
+				</div>
+			</footer>
+		</div>
 	</section>
 
-	<!-- ================================================SCRIPTS==================================== -->
-	<script type="text/javascript">
-		/*================================preloader============================*/
-		$(window).on('load', function () {
-			$('.preloader-wrapper').delay(500).fadeOut('slow');
-			$(".preloadall").css("display", "none");
-		});
-
-		// ==========================burger-menu=========================================
-
-		$(".burger-menu").click(function(){
-			$(this).toggleClass("active");
-			$(".main-page__header__menu").toggleClass("active");
-			$("body").toggleClass("lock");
-		});
-
-
-		$(document).ready(function () {
-
-			/*======================Language Selector===========================*/
-			$(".main-page__header__lang").click(function(){
-				$(".select").toggleClass("active");
-			});
-			$(".select div").click(function(){
-				$(".main-page__header__lang > div:first-child").prependTo($(".select"));
-				$(this).prependTo($(".main-page__header__lang"));
-			})
-			$(".eng").click(function(){
-				$(".main-page__header__lang > div:first-child").prependTo($(".select"));
-				$(this).prependTo($(".main-page__header__lang"));
-			})
-
-
-			// ============================Slider=======================
-		let slide_qty = $(".about-page__content__slider_screens > div").length;
-		
-		for (let i = 0; i < slide_qty; i++) {
-			if (i == 0) {
-				$(".about-page__content__slider_dots").append("<div class='dot active'><div>");
-			} else {
-				$(".about-page__content__slider_dots").append("<div class='dot'><div>");}
-		};
-		let dots = $(".about-page__content__slider_dots").children();
-
-		
-		$(".about-page__content__slider_switch").click(function(){
-			$(".screen").first().appendTo(".about-page__content__slider_screens");
-			let dots_ind = $(".dot.active").last().index();
-			// $(".dot.active").removeClass("active");
-			if (dots_ind < slide_qty - 1) {
-				$(dots[++dots_ind]).addClass("active");
-			} else {
-				$(".dot.active").removeClass("active");
-				$(dots[0]).addClass("active");
-				dots_ind = 0;
-			}
-		});
-
-		let slides_order = $(".about-page__content__slider_screens").children();
-
-			$(".dot").click(function(){
-				$(this).addClass("active");
-				$(this).prevAll().addClass("active");
-				$(this).nextAll().removeClass("active");
-				let index = $(this).index();
-				console.log(index);
-				if (index == 0) {
-					$(slides_order).prependTo(".about-page__content__slider_screens");
-				} else {
-					$(slides_order[index-1]).nextAll().prependTo(".about-page__content__slider_screens");
-				}
-				
-			});
-
-			// ================ feature switcher =====================
-			$(".feature").click(function(){
-				$(".feature").removeClass("active");
-				$(this).addClass("active");
-			})
-		});
-			// ===================Load Quotes===================
-			$(".quotes-page__content__description_button").click(function(){
-				$(".quotes-page__content__posts .user:nth-child(n+4)").prependTo(".quotes-page__content__posts");
-			})
-
-
-
-	</script>
+	<!-- ========================================Scripts============================================== -->
+	<script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
